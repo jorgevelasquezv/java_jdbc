@@ -18,6 +18,7 @@ public class EjemploJDBC {
         Categoria categoria = new Categoria();
         categoria.setNombre("Iluminacion");
 
+        System.out.println("============== Agregar producto con categoria ==============");
         Producto producto = new Producto();
         producto.setNombre("Lampara led escritorio");
         producto.setPrecio(440);
