@@ -93,6 +93,7 @@ public class ProductoRepositorioImpl implements Repositorio<Producto> {
         categoria.setId(resultSet.getLong("id_categoria"));
         categoria.setNombre(resultSet.getString("categoria"));
         producto.setCategoria(categoria);
+        
         return producto;
     }
 }
