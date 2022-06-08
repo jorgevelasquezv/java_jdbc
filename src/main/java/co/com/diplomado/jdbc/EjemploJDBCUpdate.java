@@ -13,7 +13,7 @@ import java.util.Date;
 public class EjemploJDBCUpdate {
     public static void main(String[] args) {
 
-        try (Connection conn = ConexionBaseDatos.getInstance();) {
+        try{
 
             Repositorio<Producto> repositorio = new ProductoRepositorioImpl();
             System.out.println("============== Listar ==============");
@@ -24,7 +24,7 @@ public class EjemploJDBCUpdate {
 
             System.out.println("============== Editar producto ==============");
             Producto producto = new Producto();
-            producto.setId(16L);
+            producto.setId(5L);
             producto.setNombre("Teclado Razer Mecanico");
             producto.setPrecio(700);
             Categoria categoria = new Categoria();

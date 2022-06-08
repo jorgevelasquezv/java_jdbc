@@ -12,7 +12,7 @@ import java.util.Date;
 public class EjemploJDBC {
     public static void main(String[] args) {
 
-        try (Connection conn = ConexionBaseDatos.getInstance();) {
+        try{
 
             Repositorio<Producto> repositorio = new ProductoRepositorioImpl();
             System.out.println("============== Listar ==============");

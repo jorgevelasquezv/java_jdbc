@@ -10,8 +10,12 @@ import java.util.List;
 
 public class ProductoRepositorioImpl implements Repositorio<Producto> {
 
+//    private Connection getConnection() throws SQLException {
+//        return ConexionBaseDatos.getInstance();
+//    }
+
     private Connection getConnection() throws SQLException {
-        return ConexionBaseDatos.getInstance();
+        return ConexionBaseDatos.getConnection();
     }
 
     @Override
@@ -65,7 +69,7 @@ public class ProductoRepositorioImpl implements Repositorio<Producto> {
             if (producto.getId() != null && producto.getId() > 0 ){
                 preparedStatement.setLong(4, producto.getId());
             }else {
-                preparedStatement.setDate(3, new Date(producto.getFechaRegistro().getTime()));
+                preparedStatement.setDate(4, new Date(producto.getFechaRegistro().getTime()));
             }
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
