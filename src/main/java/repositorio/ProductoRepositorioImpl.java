@@ -16,13 +16,13 @@ public class ProductoRepositorioImpl implements Repositorio<Producto> {
         this.conn = conn;
     }
 
-//    private Connection getConnection() throws SQLException {
-//        return ConexionBaseDatos.getInstance();
-//    }
+    public ProductoRepositorioImpl() {
+    }
 
-//    private Connection getConnection() throws SQLException {
-//        return ConexionBaseDatos.getConnection();
-//    }
+    @Override
+    public void setConn(Connection conn) {
+        this.conn = conn;
+    }
 
     @Override
     public List<Producto> listar() {

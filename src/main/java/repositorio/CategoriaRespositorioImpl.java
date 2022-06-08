@@ -1,5 +1,6 @@
-package co.com.diplomado.jdbc.models;
+package repositorio;
 
+import co.com.diplomado.jdbc.models.Categoria;
 import repositorio.Repositorio;
 
 import java.sql.*;
@@ -11,6 +12,14 @@ public class CategoriaRespositorioImpl implements Repositorio<Categoria> {
     private Connection conn;
 
     public CategoriaRespositorioImpl(Connection conn) {
+        this.conn = conn;
+    }
+
+    public CategoriaRespositorioImpl() {
+    }
+
+    @Override
+    public void setConn(Connection conn) {
         this.conn = conn;
     }
 
